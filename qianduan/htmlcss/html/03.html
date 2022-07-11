@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 文档流
+    元素在文档流中特点：
+        块元素在页面独占一行，默认宽度是父元素的全部，默认高度是子元素撑开决定的。
+        行内只占自身大小，一行装不下则会换行（书写习惯一致）。
+    
+    -->
+    <!-- 盒子模型，盒模型，框模型（box model）
+    每个盒子由几部分组成：
+        内容区（content）：设置宽度width高度hight
+        内边距（padding）：内边距会影响盒子大小，
+        边框（border）：至少设置宽度border-width（不写有个默认宽度，四个值默认顺序是上右下左），颜色border-color，样式border-style
+                        会影响盒子大小，例如200盒子，加10边框就变成220大小的盒子！
+                        或者简写直接写，border：10px solid blue；
+        外边距（margin）：不会影响盒子大小，但是会影响盒子位置，margin可以设置负值
+    盒子大小由内容区，内边距，边距三个相加得到的。
+
+    水平上，margin-left+margin-right+width+padding-left+padding-right+border-left+border-right=父元素宽度
+    若宽度和外边距为auto，则宽度最大。
+    则水平居中这是，width：xxpx；margin：0 auto；0是上下边距为0，auto则是左右自动填充，则会居中
+    若宽度超过父元素，则设置了margin为负值
+
+    垂直上
+    默认情况父元素高度是被内容撑开。
+    子元素超过父元素高度，则margin为负值，溢出，可以使用overflow处理溢出子元素
+    overflow默认值：visible显示出来，hidden直接裁剪掉，scroll生成滚动条查看内容；可以使用auto根据需要生成滚动条
+
+    外边距相邻的外边距重叠，则
+    兄弟元素都是正则取最大值，一正一负取和，都是负取绝对值较大的。
+    父子元素相邻的外边距，子元素设置的话会传递给父元素。可以考虑padding，或者采用border将两个相邻的外边距隔开
+-->
+    <!-- 行内样式在垂直方向上padding，margin，border不会影响布局 -->
+
+    <!-- display
+    设置元素类型，inline设置为行内元素，block设置为块元素，inline-block设置为行内快元素，table设置为表格，none元素不显示
+    还有visiblity：默认visible正常显示，hidden隐藏不显示
+-->
+</body>
+
+</html>

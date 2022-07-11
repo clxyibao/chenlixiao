@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*去除默认样式*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /*浮动
+        浮动是只能在父元素中浮动，
+        float：none默认值，不浮动，
+                left左浮动，right右浮动
+        只要浮动后，水平布局不强制成立，从文档流脱离。
+        浮动元素上面有非浮动块元素则无法上移，主要用水平排列布局
+        浮动不会遮盖文字，可以做个文字环绕效果。
+        脱离文档流；块元素不占一行，宽高是由内容撑开。
+        高度塌方是浮动容易出现的，所以可以考虑开启BFC，
+        BFC不会被浮动元素所覆盖，、
+            子元素和父元素外边距不会重叠。
+            可以包含子元素浮动，不会造成高度塌陷。
+            开启bfc方法：1设置父元素浮动，2设置元素为行内块，3打开元素的overflow为非visible，例如hidden
+        clear作用：清除浮动元素对当前元素产生的影响
+                可选值，left清除左侧浮动元素对当前元素的影响。
+                    right清除右侧浮动元素对当前元素的影响
+                    both是清除两侧影响较大的。
+                    all则是清除所有。
+                    原理则是添加一个外边距
+            可以考虑解决高度塌陷问题，假如伪元素，例如下面的box2::after{content:"hello";display:block;clear:both;}
+        可以分开父子间隔，例如clearfix这个样式可以解决高度塌方和外边距重叠问题
+        .clearfix::before,.clearfix::after{
+            content:'';
+            display:table;
+            clear:both;
+        }
+            */
+    </style>
+</head>
+<div class="box1">
+    <div class="box2"></div>
+</div>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <button @click="qiehuan">{{isHot}}</button>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                isHot: true,
+                numbers: {
+                    a: 1, b: 2
+                }
+            },
+            computed: {},
+            methods: {
+                qiehuan() {
+                    this.isHot = !this.isHot
+                }
+            },
+            watch: {
+                isHot: {
+                    immediate: true,//初始化执行
+                    handler(newValue, oldValue) {
+                        console.log('ishot被修改了', newValue, oldValue)
+                    }
+                },
+                // 监视多级结构下的a
+                'numbers.a': {
+                    handler() {
+                        console.log('a被改变')
+                    }
+                },
+                //深度的,多层级所有属性的改变监测
+                numbers: {
+                    deep: true,
+                    handler() {
+                        console.log('numbers被改变')
+                    }
+                }
+
+            },
+        })
+        //另一种监视写法
+        // vm.$watch('isHot',{
+        //     immediate: true,//初始化执行
+        //             handler(newValue, oldValue) {
+        //                 console.log('ishot被修改了', newValue, oldValue)
+        //             }
+        // })
+// watch能异步，但是computed不能使用异步，类似定时器。
+// watch比computed更高级，computed能完成的watch都可以。
+// 所有被vue管理的最好使用普通函数，不被vue管理的使用箭头函数，
+    </script>
+</body>
+
+</html>

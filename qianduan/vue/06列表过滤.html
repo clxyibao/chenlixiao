@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <input type="text" v-model="keyWord" placeholder="请输入名字">
+        <ul>
+            <li v-for="(p,index) in guolv" :key="index">
+                {{p.name}}={{p.id}}
+
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        //computed过滤渲染
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                keyWord: '',
+                persons: [
+                    { id: '001', name: '马冬梅', age: '18' },
+                    { id: '002', name: '周冬雨', age: '13' },
+                    { id: '003', name: '周杰伦', age: '12' },
+                    { id: '004', name: '温伦', age: '12' },
+                ],
+            },
+            computed: {
+                guolv() {
+                    return this.persons.filter((p) => {
+                        return p.name.indexOf(this.keyWord) !== -1
+                    })
+                }
+            },
+
+        })
+
+//#region
+//watch过滤渲染
+        // const vm = new Vue({
+        //     el: '#root',
+        //     data: {
+        //         keyWord: '',
+        //         persons: [
+        //             { id: '001', name: '马冬梅', age: '18' },
+        //             { id: '002', name: '周冬雨', age: '13' },
+        //             { id: '003', name: '周杰伦', age: '12' },
+        //             { id: '004', name: '温伦', age: '12' },
+        //         ],
+        //         guolv: []
+        //     },
+        //     methods: {
+        //     },
+        //     computed: {},
+        //     watch: {
+        //         keyWord: {
+        //             immediate: true,
+        //             handler(val) {
+        //                 this.guolv = this.persons.filter((p) => {
+        //                     return p.name.indexOf(val) !== -1
+        //                 })
+        //             }
+        //         }
+        //     },
+        // })
+//#endregion
+    </script>
+</body>
+
+</html>

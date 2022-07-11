@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            --color: #bfa;
+            --length: 200px;
+        }
+
+        .box1 {
+            background-color: var(--color);
+            width: var(--length);
+        }
+
+        /*在less中可以采用@变量名，
+    类型或者一部分值的话则使用 .@（类名）{}
+    @a:box1;
+    @c:box6;
+    .@(c){
+        width:@a;
+        background-image:url("@{c}/1.png")
+    }
+    less就近原则，重名的时候优先使用近的
+    &指的是外层的
+    .box1{
+        .box2{}
+        &:hover{}
+        &指的是。box1
+    }
+    extend扩展
+    .box2:extend(.box1){
+        就是box1的属性，然后增加以下的属性
+    }
+    或者直接引用
+    .box2{
+        .box1();
+    }
+    专门给别人通用的是mixin
+    则例如box2（变量）{}
+    别人直接引用box2（变量值）
+    @import “less文件”引用less文件，可以多个less合并
+    */
+    </style>
+</head>
+
+<body>
+    <!-- less是css增强版
+    
+    -->
+    <div class="box1"></div>
+</body>
+
+</html>

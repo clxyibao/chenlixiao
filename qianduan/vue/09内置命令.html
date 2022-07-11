@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <!-- v-text替换掉文本框内容，常用的是{{data}}插值语法，不会替换掉
+
+v-html可以识别html标签，然后记住v-html存在安全问题，切记不要有用户提交，因为会有xss攻击，冒充用户
+
+v-cloak指令，例如<h2 v-clock>{{name}}</h2>在vue接管之前不显示。就是有vue包才显示，没有则删除
+或者说是指在style中    [v-cloak]{display：none}.当网速过慢加载vue
+
+v-once指的是初始值data的值，数据改变也不会影响到他
+
+v-pre能跳过分析vue是否介入，加快速度，例如静态文本，没有使用指令语法和插值语法的vue
+
+
+-->
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el: '#root',
+            data: {
+            },
+            methods: {
+            },
+            //过滤器
+            filters: {
+
+            },
+            computed: {},
+            watch: {},
+        })
+    </script>
+</body>
+
+</html>

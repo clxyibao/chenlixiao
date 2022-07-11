@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <!-- 
+    vue会监视所有层次中的数据
+    监视数组中的数据：通过包裹数组更新元素的方法实现
+            1.调用原生对应的方法对数组进行更新
+            2.重新解析模板，更新页面
+    在vue数组某个元素中应该采用以下
+            1、使用api方法：push（），pop（），shift（），unshift（），splice（），sort（），reverse()
+            2.Vue.set或者vm.$set() (ps.无法更根数据对象就是data添加属性的！)
+        
+ -->
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el: '#root',
+            data: {
+            },
+            methods: {
+            },
+            computed: {},
+            watch: {},
+        })
+    </script>
+</body>
+
+</html>

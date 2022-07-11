@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <ul>
+            <!-- 有了key可以进行虚拟dom对比，避免会导致真实dom错乱
+            但是如果采用index破坏数据顺序则会错乱，在最后添加则不会，但是效率低
+            采用id的话可以应付顺序打乱情况
+            有唯一id就尽量用唯一id
+            -->
+            <li v-for="(p,index) in persons" :key="index">
+                {{p.name}}={{p.id}}
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                persons: [
+                    { id: '001', name: '张三', age: '18' },
+                    { id: '002', name: '张4', age: '13' },
+                    { id: '003', name: '2三', age: '12' },
+                ]
+            },
+            methods: {
+            },
+            computed: {},
+            watch: {},
+        })
+    </script>
+</body>
+
+</html>

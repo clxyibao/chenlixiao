@@ -1,0 +1,62 @@
+<!-- 下面这个是文档说明，告诉浏览器用html5技术 -->
+<!DOCTYPE html>
+<!-- 英文网站，如果要改成中文网站就改成zh -->
+<html lang="en">
+<!-- head帮助网页搜索引擎解析网页用的 -->
+
+<head>
+    <!-- 编码的字符集为utf-8万国码 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- name:keywords，content就是关键字的内容，例如关键内容是html，css 
+        name：description，content就是网站描述，例如这是个学习css的网站
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 属性选择器 */
+        p[title] {
+            color: red;
+        }
+
+        p[title=abd] {
+            color: red;
+        }
+
+        /*属性值不等于abd的含title的p标签*/
+        p[title^=abc] {
+            color: red;
+        }
+
+        /*属性值以abd结尾的*/
+        p[title$=abc] {
+            color: red;
+        }
+
+        /*以下是超链接的伪类*/
+        /*:link表示没访问的链接*/
+        a:link {
+            color: red;
+        }
+
+        /*:visited用于访问过的链接，只能改颜色，因为用户隐私情况*/
+        /*：hover鼠标移入状态，active鼠标点击不松手状态*/
+    </style>
+</head>
+
+<body>
+    <p>a&nbsp;b</p>
+    <!-- ./是当前文件，而../是当前文件的上一级目录 -->
+    <a href="javascript:;"></a>
+    <!--  src路径，alt是图片的描述，用于搜索引擎用的-->
+    <img src="" alt="">
+    <!-- 引入网页 -->
+    <iframe src="" frameborder="0"></iframe>
+    <!-- 如果ie不支持，可以通过source来选择提示。 -->
+    <audio controls>
+        对不起，您的浏览器不支持播放音频！请升级浏览器！
+        <source src="">
+    </audio>
+</body>
+
+</html>

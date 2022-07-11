@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <span v-text="n"></span>
+        <span v-big="n"></span>
+        <button @click="n++">dianwo</button>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                n: 1,
+            },
+            methods: {
+            },
+            //自定义指令
+            directives: {
+                //函数何时被调用？当指令和元素成功绑定时候就是一开始加载的时候
+                //或者指令所在的模板被重新解析时
+                big(element, binding) {
+                    //element是真实的dom，binding绑定的对象
+                    element.innerText = binding.value * 10;
+                }
+            },
+            //过滤器
+            filters: {
+
+            },
+            computed: {},
+            watch: {},
+        })
+    </script>
+</body>
+
+</html>

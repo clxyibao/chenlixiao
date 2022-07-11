@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*样式冲突了，则进行选择器权重优先级判断。
+        行内（内联样式） > id选择器 > 类和伪类选择器 > 元素选择器>通配选择器>继承选择器
+        例如行内> #box > .red > div
+        优先级相同，则优先使用下面的显示
+        比较优先级会先进行所有选择器优先级进行相加，分组的话则单独比较
+        例如div#box，则大于#box，但是每个分级是不可累加超过上一级的
+        div，p，span。则单独计算
+        假如在样式表中最后假如！important则最高优先级，例如div{color:red !important}
+        */
+        div {
+            color: red;
+        }
+
+        .red {
+            color: rosybrown;
+        }
+
+        /*
+        长度单位：
+        像素px，像素越小的屏幕显示越清晰；
+        百分比%，相对于父元素属性的百分比；
+        em，相对于元素字体大小，1em=1 font-size，根据字体大小变了就变了
+        rem，rem是相对于根元素字体大小来计算的，就是html的字体大小
+        */
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(106, 50, 63, 0.8);
+            background-color: hsla(229, 100%, 50%, 0.795);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="red">我是样式优先级</div>
+    <div id="box1">这是个单位</div>
+</body>
+
+</html>

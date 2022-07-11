@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 表单用于提交数据
+    form属性
+        action：表单提交的服务器地址
+    -->
+    <form action="">
+        <!-- 需要里面有文本框，必须有name属性获取数据，提交按钮 
+            autocomplete不提示内容
+            readonly只读，数据会提交
+            disabled禁用，数据不会提交
+            autofocus获取焦点
+        -->
+        账号<input type="text" name="username" id="" autocomplete="off">
+        <br>
+        密码<input type="password" name="password" id="">
+        <br>
+        单选按钮<input type="radio" name="xuan1" value="选择1" checked>
+        <input type="radio" name="xuan2" value="选择2">
+        <br>
+        多选<input type="checkbox" name="11" value="1">
+        <input type="checkbox" name="22" value="2">
+        <input type="checkbox" name="33" value="3">
+        <br>
+        下拉
+        <select name="xiala" id="">
+            <option selected value="i">选择1</option>
+            <option value="ii">选择2</option>
+            <option value="iii">选择3</option>
+        </select>
+        <br>
+        <input value="登录" type="submit" name="" id="">
+        <input value="重置按钮" type="reset" name="" id="">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <!-- v-show节点存在，只是视觉消失，调整display属性
+    v-if节点不存在
+    变化频率决定v-show和v-if，频率高用v-show比较好，只是隐藏显示，而不是增加删除节点。
+template不影响结构，只能配合v-if，
+-->
+        <template v-if="true">
+            <div>
+
+            </div>
+        </template>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el: '#root',
+            data: {
+            },
+            methods: {
+            },
+            computed: {},
+            watch: {},
+        })
+    </script>
+</body>
+
+</html>

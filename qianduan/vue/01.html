@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = 18
+        let person = {
+            name: '张三',
+            sex: '男',
+        }
+        //object.defineproperty是为了把vue的data代理到对象上，这样方便管理。实际上在vue的——data中的数据
+        Object.defineProperty(person, 'age', {
+            // enumerable: true,//控制属性是否枚举就是被遍历，
+            //writable: true,//控制属性是否被修改
+            //configurable:true,//控制属性是否被删除 
+
+            //当有人读取person的age属性时，get函数（getter）就会被调用，且返回值就是age的值
+            get: function () {
+                return number
+            },
+            set(value) {
+                number = value;
+                console.log('有人改变了值')
+            }
+        })
+        //console.log(Object.keys(person))
+        console.log(person)
+    </script>
+</body>
+
+</html>

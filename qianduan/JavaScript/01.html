@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        script标签引入外部则无法继续编写，需要新建script才可以编写
+        1.js中需要注意大小写。
+        2.需要用分号（；）结尾，虽然浏览器会自动添加，但是会加错分号。
+        3.js会忽略空格和换行。
+     -->
+    <script type="text/javascript" src="js/01.js"></script>
+</head>
+
+<body>
+    <!-- 可以将js代码编辑到onclick中,或者超链接的href中,或者 -->
+    <button onclick="alert('点我干嘛')">点我一下</button>
+    <a href="javascript:alert('点我干锤子');">点我一下呗</a>
+    <a href="javascript:;">阻止跳转</a>
+</body>
+
+</html>

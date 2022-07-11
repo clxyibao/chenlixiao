@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- jquery是在html全部dom加载后才会去执行
+        JavaScript是在加载完所有内容才执行
+    -->
+    <script>
+        // JavaScript是window.onload=function(){}
+        //jquery是$(document).ready(function(){}),下面是缩写
+        $(function () {
+            //选择器
+            $("button").click(function () {//这是触发语法
+                $("p").hide();//这是动作
+                $("#test").hide();//这是id选择器
+                $(".test").hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

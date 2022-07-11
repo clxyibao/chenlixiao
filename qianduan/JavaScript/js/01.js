@@ -1,0 +1,1 @@
+alert("我是script标签中的代码a a a ")
